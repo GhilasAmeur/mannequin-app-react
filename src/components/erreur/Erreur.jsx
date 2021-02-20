@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 function Erreur() {
   return (
     <div>
-      <Navbar />
-
       <div className="container" style={{ height: 340 }}>
         {" "}
         <h3 className="text-center p-3"> Oops</h3>
@@ -19,7 +17,6 @@ function Erreur() {
           <p className="text-center p-5 ">Take me back to the home page </p>
         </Link>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -53,7 +53,11 @@ function App() {
             path="/"
             render={(props) => <Acceuil {...props} data={data} />}
           />
-          <Route exact path="/description/:id" component={Description} />
+          <Route
+            exact
+            path="/description/:id"
+            render={(props) => <Description {...props} data={data} />}
+          />
           <Route exact path="/:erreur" component={Erreur} />
         </Switch>
       </Router>

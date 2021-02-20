@@ -1,7 +1,9 @@
 import React from "react";
 import "../../css/mannequins.css";
+import { Link } from "react-router-dom";
 
 function UnMannequin({ mannequin }) {
+  //console.log(mannequin);
   return (
     <div className="card-wrapper p-1">
       <div className="content">
@@ -57,7 +59,13 @@ function UnMannequin({ mannequin }) {
 
             <p>Subscribe our Youtube Channel</p>
             <h5 className="font-weight-bold">THE PROVIDER</h5>
-            <button className="btn btn-danger ml-1">Subscribe</button>
+            <Link
+              to={`/description/${mannequin.name}`}
+              className="btn btn-success "
+              type="submit"
+            >
+              Description
+            </Link>
           </div>
         </div>
       </div>
