@@ -7,9 +7,7 @@ function Accueil({ data }) {
   //console.log(data);
   return (
     <div>
-      <Navbar />
       <Mannequins data={data} />
-      <Footer />
     </div>
   );
 }

@@ -1,6 +1,20 @@
 import React from "react";
 import "../../css/navbar.css";
-function Navbar() {
+import { useState } from "react";
+
+function Navbar({ inputSearch }) {
+  const [search, setSearch] = useState("");
+  const handlChange = (e) => {
+    // console.log(e.target.value);
+    setSearch(e.target.value);
+  };
+
+  const handlSubmit = (e) => {
+    e.preventDefault();
+    inputSearch(search);
+    setSearch("");
+  };
+
   return (
     <header>
       <div className="navbar-collapse collapse inverse" id="navbar-header">
@@ -58,16 +72,14 @@ function Navbar() {
             folks don't simply skip over it entirely.
           </p>
 
-          <form>
-            {" "}
-            {/*onSubmit={handlSubmit}*/}
+          <form onSubmit={handlSubmit}>
             <div className="input-group mb-3">
               <input
                 type="text"
                 className="form-control"
                 placeholder="Mannequin's name"
-                //   value={search}
-                //   onChange={handlChange}
+                value={search}
+                onChange={handlChange}
               />
               <div className="input-group-append">
                 <button className="btn btn-info" type="submit">
