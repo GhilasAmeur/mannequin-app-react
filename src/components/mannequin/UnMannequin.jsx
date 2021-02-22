@@ -2,8 +2,8 @@ import React from "react";
 import "../../css/mannequins.css";
 import { Link } from "react-router-dom";
 
+//recuperation de mannequins de composant Mannequins pour un meilleur code de ce dernier
 function UnMannequin({ mannequin }) {
-  //console.log(mannequin);
   return (
     <div className="card-wrapper p-1">
       <div className="content">

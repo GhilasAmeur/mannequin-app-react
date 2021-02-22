@@ -5,22 +5,21 @@ import uniqid from "uniqid";
 import DescriptionUnique from "../mannequin/DescriptionUnique";
 
 function Description({ match }) {
+  //nos states
   const [mannequin, setMannequin] = useState([]);
   const [comment, setComment] = useState("");
+  //state commentaire par default
   const [myComments, setMyComments] = useState([
     { id: 1, comment: "comment 1" },
     { id: 2, comment: "comment 2" },
   ]);
-
+  //fonction on recupere le commentaire saisie et on modifier le state pour afficher le nouveau commentaire
   const handlCommentSubmit = (data) => {
     const newComment = [...myComments, { id: uniqid(), comment: data }];
 
     setMyComments(newComment);
-    console.log(newComment);
-
-    //setComment([...myComments, { id: uniqid(), comment: data }]);
   };
-
+  //useEffect pour recuperer le nom de mannequin puis afficher ses infos personnelles
   useEffect(() => {
     const nomUrl = match.params.id;
     axios

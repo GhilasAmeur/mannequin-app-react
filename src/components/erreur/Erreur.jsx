@@ -1,16 +1,14 @@
 import React from "react";
-import Navbar from "../accueil/Navbar";
-import Footer from "../accueil/Footer";
 import { Link } from "react-router-dom";
 
+//composant pour afficher si url innexistant
 function Erreur() {
   return (
     <div>
       <div className="container" style={{ height: 340 }}>
         {" "}
-        <h3 className="text-center p-3"> Oops</h3>
-        <h4 className="text-center">
-          {" "}
+        <h3 className="text-center p-3 text-danger"> Oops</h3>
+        <h4 className="text-center text-danger">
           The page you were looking for doesn't exist
         </h4>
         <Link to="/">

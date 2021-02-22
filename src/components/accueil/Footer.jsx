@@ -1,8 +1,8 @@
 import React from "react";
-
 import platStore from "../../img/play-store.svg";
 import windowsStore from "../../img/windows-store.svg";
 import appStore from "../../img/app-store.svg";
+//Footer
 function Footer() {
   return (
     <footer className="bg-secondary">

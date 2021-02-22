@@ -7,7 +7,6 @@ function DescriptionUnique({ mannequin }) {
         className=" rounded-circle m-2"
         width="160px;"
         height="160px"
-        // class="card-img-top"
         src={"https://i.mdel.net/i/db/" + mannequin.image}
         alt="Card image cap"
       />
@@ -18,8 +17,10 @@ function DescriptionUnique({ mannequin }) {
         <p className="font-weight-bold text-info">{mannequin.type}</p>
         <div className="">
           <p className="card-text text-white p-2">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quia
+            itaque voluptates natus ab fugit, sed repellat omnis in amet optio
+            labore mollitia cumque provident error dolore commodi? Cumque,
+            asperiores.
           </p>
         </div>
 

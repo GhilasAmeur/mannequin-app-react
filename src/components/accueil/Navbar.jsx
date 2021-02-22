@@ -3,12 +3,13 @@ import "../../css/navbar.css";
 import { useState } from "react";
 
 function Navbar({ inputSearch }) {
+  //nos states
   const [search, setSearch] = useState("");
+  //notre champ de saisie
   const handlChange = (e) => {
-    // console.log(e.target.value);
     setSearch(e.target.value);
   };
-
+  //notre button d'envoi
   const handlSubmit = (e) => {
     e.preventDefault();
     inputSearch(search);
@@ -44,7 +45,7 @@ function Navbar({ inputSearch }) {
           </div>
         </div>
       </div>
-      {/*formulaire */}
+
       <div className="navbar navbar-static-top navbar-dark bg-dark">
         <div className="container-fluid">
           <button
