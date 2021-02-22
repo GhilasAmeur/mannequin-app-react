@@ -1,16 +1,32 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import uniqid from "uniqid";
+import DescriptionUnique from "../mannequin/DescriptionUnique";
 
-function Description({ match, data }) {
+function Description({ match }) {
   const [mannequin, setMannequin] = useState([]);
-  const nom = match.params.id;
+  const [comment, setComment] = useState("");
+  const [myComments, setMyComments] = useState([
+    { id: 1, comment: "comment 1" },
+    { id: 2, comment: "comment 2" },
+  ]);
+
+  const handlCommentSubmit = (data) => {
+    const newComment = [...myComments, { id: uniqid(), comment: data }];
+
+    setMyComments(newComment);
+    console.log(newComment);
+
+    //setComment([...myComments, { id: uniqid(), comment: data }]);
+  };
 
   useEffect(() => {
+    const nomUrl = match.params.id;
     axios
       .get(
         "https://api.models.com/prosearch/sitesearch19-json.html?mdcsearch=" +
-          nom
+          nomUrl
       )
       .then((res) => {
         console.log(res.data.people[0].image);
@@ -18,28 +34,38 @@ function Description({ match, data }) {
       });
   }, []);
 
-  // const mannequinDescription = data.filter((el) => el.name == nom);
-  // console.log(mannequinDescription);
-  // setMannequin(mannequinDescription);
-
   return (
-    <div className="container">
-      <div className="card-wrapper p-1 ">
-        <div className="">
-          <div className="  ">
-            <img
-              src={"https://i.mdel.net/i/db/" + mannequin.image}
-              className="rounded-circle m-2"
-              width="150px;"
-              height="150px"
-            />
+    <div className="container col-md-4 text-center p-2">
+      <DescriptionUnique mannequin={mannequin} />
 
-            <div className="card-body">
-              <h4 className="font-weight-bold">{mannequin.name}</h4>
+      <div className=" container">
+        <div className="row">
+          <div className="col-md-8">
+            <textarea
+              className="form-control m-2 text-black bg-white  rounded-pill"
+              placeholder="Add a new comment"
+              value={comment}
+              onChange={(event) => setComment(event.target.value)}
+            ></textarea>
+            <h6 className="col-md-4">
+              <span
+                className="text-warning bg-secondary badge badge-secondary rounded-pill col-md-12"
+                type="submit"
+                onClick={(event) => {
+                  event.preventDefault();
+                  handlCommentSubmit(comment);
+                  setComment("");
+                }}
+              >
+                Add
+              </span>
+            </h6>
 
-              <p className="font-weight-bold blue-text">{mannequin.type}</p>
-              <p></p>
-            </div>
+            {myComments.map((comment, index) => (
+              <div className="container text-white" key={index}>
+                {comment.comment}
+              </div>
+            ))}
           </div>
         </div>
       </div>

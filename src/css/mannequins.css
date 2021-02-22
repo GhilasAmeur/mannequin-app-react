@@ -17,10 +17,10 @@
   transform-style: preserve-3d;
 }
 
-.card-wrapper:hover .content {
+/* .card-wrapper:hover .content {
   transform: rotateY(180deg);
   transition: 1s;
-}
+} */
 
 .face-front,
 .face-back {

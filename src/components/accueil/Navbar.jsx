@@ -22,10 +22,10 @@ function Navbar({ inputSearch }) {
           <div className="about">
             <h4>About</h4>
             <p className="text-muted">
-              Add some information about the album below, the author, or any
-              other background context. Make it a few sentences long so folks
-              can pick up some informative tidbits. Then, link them off to some
-              social networking sites or contact information.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde
+              minus, aut voluptate magnam facilis architecto rerum similique
+              fugiat quas alias obcaecati reprehenderit sit dolorem. Similique
+              illo laborum ratione aut est?
             </p>
           </div>
           <div className="social">
@@ -56,20 +56,19 @@ function Navbar({ inputSearch }) {
             &#9776;
           </button>
           <a href="#" className="navbar-brand">
-            Mason &amp; Daughters
+            Model &amp; Athlete
           </a>
         </div>
       </div>
 
       <section className="jumbotron text-xs-center ">
         <div className="container">
-          <h1 className="jumbotron-heading text-center">
-            Mason &amp; Daughters
-          </h1>
+          <h1 className="jumbotron-heading text-center">Model &amp; Athlete</h1>
           <p className="lead  text-white  ">
-            Something short and leading about the collection below—its contents,
-            the creator, etc. Make it short and sweet, but not too short so
-            folks don't simply skip over it entirely.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente,
+            provident voluptate. Earum illo atque enim, reiciendis maxime vero,
+            natus nihil aspernatur quasi voluptates in minus dolorum alias odio?
+            Error, adipisci!
           </p>
 
           <form onSubmit={handlSubmit}>

@@ -19,10 +19,21 @@ function UnMannequin({ mannequin }) {
             <h4 className="font-weight-bold">{mannequin.name}</h4>
 
             <p className="font-weight-bold blue-text">{mannequin.type}</p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
-              tenetur odio suscipit non commodi veleius veniam maxime?
-            </p>
+            <p>Lorem ipsum dolor sit amet, kksnd tenetur odio suscipit non</p>
+            <ul className="list-inline m-2 font-weight-lighter p-2 " style={{}}>
+              <li className="list-inline-item mx-2 ">
+                <a className=" fa-lg fb-ic">
+                  <i className="fas fa-heart "></i>
+                </a>
+                <span className="">1 Likes</span>
+              </li>
+              <li className="list-inline-item">
+                <a className=" fa-lg tw-ic">
+                  <i className="fas fa-comment"></i>
+                </a>
+                <span className="">1 Comments</span>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="face-back z-depth-2">
